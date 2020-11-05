@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1604552322 source:g:\documents\github\modelingwithopengl\traffic_light\main.cpp
+1604553445 source:g:\documents\github\modelingwithopengl\traffic_light\main.cpp
 	<GLUT/glut.h>
 	<GL/glut.h>
 	<iostream>
+	"tf.h"
 
 1571309680 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
 	<windows.h>
@@ -218,4 +219,11 @@
 1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\glu.h
 	<stddef.h>
 	<GL/gl.h>
+
+1604552994 g:\documents\github\modelingwithopengl\traffic_light\tf.h
+
+1604553294 source:g:\documents\github\modelingwithopengl\traffic_light\tf.cpp
+	<GL/glut.h>
+	<iostream>
+	"tf.h"
 

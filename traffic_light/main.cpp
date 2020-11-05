@@ -7,46 +7,18 @@
 #endif
 
 #include <iostream>
+#include "tf.h"
 
 using namespace std;
-static GLfloat disksize = 15.0;
-/* GLUT callback Handlers */
 
 static void display(void)
 {
 
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glColor3d(1,1,0);
-
     glPushMatrix();
-        glRotatef(30.0,1.0,1.0,0.0);
-        GLUquadricObj *quadratic;
-        quadratic = gluNewQuadric();
-        glPushMatrix();
-            glColor3f(0.74,0.74,0.74);
-            glRotatef(90.0 ,1.0,0.0,0.0);
-            gluCylinder(quadratic,disksize,disksize,500.0,32,32);
-        glPopMatrix();
-        glPushMatrix();
-            glColor3f(0.74,0.74,0.74);
-            glRotatef(-90.0,1.0,0.0,0.0);
-            gluDisk(quadratic,0.0,disksize,30,15);
-        glPopMatrix();
-
-        glPushMatrix();
-            glColor3f(0.74,0.74,0.74);
-            glTranslatef(0.0,-30.0,0);
-            gluDisk(quadratic,0.0,disksize,30,15);
-            glColor3f(0.74,0.74,0.74);
-            glRotatef(180.0,0.0,1.0,0.0);
-            gluCylinder(quadratic,disksize,disksize,400.0,32,32);
-            glColor3f(1.0,0.0,0.0);
-            glTranslatef(0.0,0.0,50.0);
-            //gluCylinder(quadratic,50.0,50.0,700.0,32,32);
-        glPopMatrix();
-
-
+        glRotatef(30.0,1.0,-1.0,0.0);
+        draw_tf();
     glPopMatrix();
 
 
@@ -72,7 +44,7 @@ int main(int argc, char *argv[])
     glutInitWindowPosition(0,0);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
 
-    glutCreateWindow("GLUT Shapes");
+    glutCreateWindow("traffic light");
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(-1000.0,1000.0,-600.0,600.0,-1000.0,1000.0);
