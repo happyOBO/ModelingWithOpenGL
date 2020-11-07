@@ -14,7 +14,7 @@
 
 - 왼쪽 그림을 참고해서 침엽수 모델링
 
-<img src="./evergreen_motive.png" width="600">
+<img src="./evergreen_motive.png" width="500">
 
 
 ### traffic light
