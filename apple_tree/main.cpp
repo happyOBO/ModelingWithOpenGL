@@ -20,6 +20,7 @@ static void display(void)
         glRotatef(90.0,0.0,1.0,0.0);
         glRotatef(30.0,1.0,-1.0,0.0);
         draw_apple_tree();
+
     glPopMatrix();
 
 
