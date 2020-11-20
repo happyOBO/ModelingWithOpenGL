@@ -13,6 +13,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -24,6 +25,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++11" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -42,10 +44,47 @@
 			<Add library="gdi32" />
 			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/lib" />
 		</Linker>
+		<Unit filename="Camera.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Game.cpp" />
+		<Unit filename="Game.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Light.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Material.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Mesh.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Model.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="OBJLoader.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Primitives.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Shader.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Texture.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="Vertex.h">
+			<Option compile="1" />
+		</Unit>
 		<Unit filename="bin/Debug/cup.mtl">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="bin/Debug/cup.obj">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="libs.h">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="main.cpp" />

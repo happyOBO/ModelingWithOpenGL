@@ -12,17 +12,17 @@
  * using the + and - keys.
  */
 
-#ifdef __APPLE__
-#include <GLUT/glut.h>
-#else
-#include <GL/glut.h>
-#endif
+//#ifdef __APPLE__
+//#include <GLUT/glut.h>
+//#else
+//#include <GL/glut.h>
+//#endif
 
 #include <stdlib.h>
-#include<GL/gl.h>
-#include<GL/glut.h>
+
 #include<stdio.h>
 
+#include "OBJLoader.h"
 
 //globals
 
@@ -39,7 +39,7 @@ float carrot;
 //.obj loader code
 
 
-void loadObj(char *fname)
+void mini_loadObj(char *fname)
 {
         FILE *fp;
         int read;
@@ -100,29 +100,29 @@ void drawCar()
 
 void display(void)
 {
-        glClearColor (0.0,0.0,0.0,1.0);
-        glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glLoadIdentity();
-        drawCar();
-        glutSwapBuffers(); //swap the buffers
+//        glClearColor (0.0,0.0,0.0,1.0);
+//        glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+//        glLoadIdentity();
+//        drawCar();
+//        glutSwapBuffers(); //swap the buffers
 }
 
 
 int main(int argc,char **argv)
 {
-     char curDir[1000];
-  _getcwd(curDir,1000);
-
-printf( "%s", curDir);
-        glutInit(&argc,argv);
-        glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB|GLUT_DEPTH);
-        glutInitWindowSize(800,450);
-        glutInitWindowPosition(20,20);
-        glutCreateWindow("ObjLoader");
-        glutReshapeFunc(reshape);
-        glutDisplayFunc(display);
-        glutIdleFunc(display);
-        loadObj("cup.obj");//replace porsche.obj with radar.obj or any other .obj to display it
-        glutMainLoop();
+//     char curDir[1000];
+//  _getcwd(curDir,1000);
+//
+//printf( "%s", curDir);
+//        glutInit(&argc,argv);
+//        glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB|GLUT_DEPTH);
+//        glutInitWindowSize(800,450);
+//        glutInitWindowPosition(20,20);
+//        glutCreateWindow("ObjLoader");
+//        glutReshapeFunc(reshape);
+//        glutDisplayFunc(display);
+//        glutIdleFunc(display);
+//        mini_loadObj("cup.obj");//replace porsche.obj with radar.obj or any other .obj to display it
+//        glutMainLoop();
         return 0;
 }
